@@ -1,7 +1,7 @@
 /**
  * @author Xavi Bermejo Borrella
  * @since 02/02/2025
- * @version 0.1
+ * @version 0.2
  * */
 import java.util.Scanner; 
 public class Calculadora {
@@ -37,6 +37,11 @@ public class Calculadora {
 		this.setResultat(this.getNum1()+this.getNum2());
 		return this.getResultat();
 	}
+	public int Resta(){
+		this.resultat = 0;
+		this.setResultat(this.getNum1()-this.getNum2());
+		return this.getResultat();
+	}
 	public static void main (String[] args) {
 		System.out.println("=== CALCULADORA ===");
 		Scanner sc = new Scanner(System.in);
@@ -48,6 +53,7 @@ public class Calculadora {
 		
 		Calculadora calc = new Calculadora(N1,N2);
 		System.out.println("La suma entre "+ N1+" y "+N2+" = "+calc.Suma());
+		System.out.println("La resta entre "+ N1+" y "+N2+" = "+calc.Resta());
 	}
 }
 
